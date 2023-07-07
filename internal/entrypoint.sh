@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /palm
-make && mv *.prc /artifacts
+make TARGET='${PRC_NAME}' && mv *.prc /artifacts

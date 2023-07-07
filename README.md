@@ -4,7 +4,7 @@ Usage:
 1. clone repo
 2. install docker
 3. add source code to `src` directory
-4. run `./compile.sh` in `linux` directory
+4. run `PRC_NAME="HELLO_WORLD" ./compile.sh` in `linux` directory, replacing "HELLO_WORLD" with the desired name for the compiled PRC
 5. retrieve .prc from artifacts directory
 
 TODO:

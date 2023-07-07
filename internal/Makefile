@@ -9,12 +9,12 @@ WARN			=	-Wsign-compare -Wextra -Wall -Werror -Wno-unused-parameter -Wno-old-sty
 LKR				=	linker.lkr
 CCFLAGS			=	$(LTO) $(WARN) $(COMMON) -I. -ffunction-sections -fdata-sections
 LDFLAGS			=	$(LTO) $(WARN) $(COMMON) -Wl,--gc-sections -Wl,-T $(LKR)
-SRCS			=   /palm/Src/helloWorld.c
-RCP				=	/palm/Src/helloWorld.rcp
-RSC				=	/palm/Src/
-OBJS			=	$(patsubst %.S,%.o,$(patsubst %.c,%.o,$(SRCS)))
+SRCS			=   $(shell find /palm/Src/ -name '*.c')
 TARGET			=	test
 CREATOR			=	test
+RCP				=	$(shell find /palm/Src/ -name '*.rcp')
+RSC				=	/palm/Src/
+OBJS			=	$(patsubst %.S,%.o,$(patsubst %.c,%.o,$(SRCS)))
 TYPE			=	appl
 
 #add PalmOS SDK
