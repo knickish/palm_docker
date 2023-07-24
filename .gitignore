@@ -1,3 +1,2 @@
 artifacts/*
 !artifacts/.gitkeep
-/src
