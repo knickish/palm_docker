@@ -25,7 +25,7 @@ RUN apt -y update && \
 
 WORKDIR /palm
 WORKDIR /tmp
-RUN wget https://palm2000.com/data/compilingAndBuildingPalmOsAppsOnUbuntu2004LTS/palmdev_V2.zip \
+RUN wget https://palm2000.com/storage/files/17-file-palmdev_V2.zip -O palmdev_V2.zip \
     && unzip palmdev_V2.zip -d /tmp \
     && ls ./palmdev_V2 
 
